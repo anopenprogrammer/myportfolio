@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+}
+body {
+  background-color: #011627;
+  color: #607b96;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Index CSS */
+
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.container a {
+  text-decoration: none;
+  color: #607b96;
+}
+.nav {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  border-bottom: 1px solid #607b96;
+}
+footer {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  border-top: 1px solid #607b96;
+}
+.my-name {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-right: 1px solid #607b96;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+.hello {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  border-right: 1px solid #607b96;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+.about-me {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  border-right: 1px solid #607b96;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+.projects {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  border-right: 1px solid #607b96;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+.blank_box1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 6;
+  grid-column-end: 12;
+  border-right: 1px solid #607b96;
+  padding: 1rem 0rem;
+}
+.contact-me {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 12;
+  grid-column-end: 13;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+.find-me {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-right: 1px solid #607b96;
+}
+.twitterlogo {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-right: 1px solid #607b96;
+}
+.facebooklogo {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-right: 1px solid #607b96;
+}
+.blank_box2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 11;
+  border-right: 1px solid #607b96;
+}
+.githublogo {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 11;
+  grid-column-end: 13;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.githublogo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  background: url('/assets/img/BackgroundBlurs.png');
+  background-size: auto;
+  background-position: right;
+}
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2rem;
+}
+.top-section {
+  margin: 2rem 0rem;
+}
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin-left: 2rem;
+}
+.sub-heading {
+  color: #e5e9f0;
+}
+.heading {
+  font-size: 3rem;
+  color: #e5e9f0;
+}
+.role {
+  color: #4d5bce;
+  font-size: 1.5rem;
+}
+.const {
+  color: #4d5bce;
+}
+.github {
+  color: #43d9ad;
+}
+.git-link-main a{
+  color: #e99287;
+}
+.menu-icon, .close-icon {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main{
+    background: none;
+  }
+  .hello,
+  .about-me,
+  .projects,
+  .contact-me,
+  .blank_box1 {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .right-section, .footer{
+    display: none;
+  }
+  .my-name{
+    border: none;
+    padding-left: 1rem;
+  }
+  .menu-icon{
+    padding: 1rem 0rem;
+    padding-right: 1rem;
+  }
+  .close-icon{
+    padding: 1rem 0rem;
+    padding-right: 1rem;
+  }
+  .left-section{
+    margin: 0rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background: url('/assets/img/BackgroundBlurs.png');
+    background-size: cover;
+  }
+  .heading{
+    font-size: 4rem;
+    line-height: 4.6rem;
+    padding-top: 0.4rem;
+  }
+  .sub-heading{
+    font-size: 1.2rem;
+  }
+  .role{
+    color: #43d9ad;
+    padding-top: 1rem;
+  }
+}
